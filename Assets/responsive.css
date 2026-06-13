@@ -234,7 +234,7 @@
   footer            { padding: 26px 0; }
   .footer-nav       { flex-wrap: wrap; gap: 10px 18px; justify-content: center; }
   .footer-nav a     { font-size: 0.78rem; }
-  .footer-brand     { font-size: 1.2rem; }
+  .footer-brand     { font-size: 1.2rem; text-align: center;}
   .footer-copy      { font-size: 0.76rem; }
 }
 
@@ -445,7 +445,7 @@
 
   /* Footer */
   footer            { padding: 18px 0; }
-  .footer-brand     { font-size: 1.05rem; }
+  .footer-brand     { font-size: 1.05rem; text-align: center;}
   .footer-copy      { font-size: 0.68rem; }
   .footer-nav       { gap: 6px 12px; flex-wrap: wrap; justify-content: center; }
   .footer-nav a     { font-size: 0.7rem; }
