@@ -1,0 +1,163 @@
+/* ==========================================================================
+   CERTIFICATES — certificates-responsive.css
+   Breakpoints mirror the main responsive.css convention:
+     lg  : 768px – 991px   (tablets)
+     md  : 576px – 767px   (large phones)
+     sm  : 400px – 575px   (standard phones)
+     xs  : < 400px         (small phones)
+   ========================================================================== */
+
+
+/* ── Tablets (768px – 991px) ── */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cert-card img {
+    height: 200px;
+  }
+
+  /* Arrows move closer on smaller screens */
+  .lightbox-arrow-prev { left: -46px; }
+  .lightbox-arrow-next { right: -46px; }
+}
+
+
+/* ── Large Phones (576px – 767px) ── */
+@media (min-width: 576px) and (max-width: 767px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cert-card img {
+    height: 180px;
+  }
+
+  .cert-title    { font-size: 0.9rem; }
+  .cert-org      { font-size: 0.74rem; }
+
+  /* Arrows tucked inside content on small screens */
+  .lightbox-arrow {
+    top: auto;
+    bottom: 70px;
+    transform: none;
+    width: 36px;
+    height: 36px;
+    font-size: 0.88rem;
+    background: rgba(10, 10, 10, 0.55);
+    border: none;
+  }
+
+  .lightbox-arrow-prev { left: 10px; }
+  .lightbox-arrow-next { right: 10px; }
+
+  .lightbox-content { border-radius: 8px; }
+  .lightbox-img     { max-height: 60vh; }
+  .lightbox-caption { padding: 14px 16px; }
+  .lightbox-caption-title { font-size: 0.95rem; }
+}
+
+
+/* ── Standard Phones (400px – 575px) ── */
+@media (min-width: 400px) and (max-width: 575px) {
+  .cert-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 14px;
+  }
+
+  .cert-card img {
+    height: 210px;
+  }
+
+  .cert-info    { padding: 12px 14px; }
+  .cert-title   { font-size: 0.92rem; }
+  .cert-org     { font-size: 0.75rem; }
+
+  /* Lightbox */
+  .cert-lightbox { padding: 12px; }
+
+  .lightbox-content { border-radius: 8px; }
+  .lightbox-img     { max-height: 55vh; }
+
+  .lightbox-arrow {
+    top: auto;
+    bottom: 68px;
+    transform: none;
+    width: 34px;
+    height: 34px;
+    font-size: 0.82rem;
+    background: rgba(10, 10, 10, 0.55);
+    border: none;
+  }
+
+  .lightbox-arrow-prev { left: 8px; }
+  .lightbox-arrow-next { right: 8px; }
+
+  .lightbox-caption       { padding: 12px 14px; gap: 6px; }
+  .lightbox-caption-title { font-size: 0.9rem; }
+  .lightbox-caption-org   { font-size: 0.8rem; }
+  .lightbox-caption-year  { font-size: 0.72rem; }
+
+  .lightbox-close { width: 34px; height: 34px; font-size: 1rem; top: 10px; right: 10px; }
+  .lightbox-counter { font-size: 0.72rem; padding: 3px 10px; }
+}
+
+
+/* ── Small Phones (< 400px) ── */
+@media (max-width: 399px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cert-card img {
+    height: 190px;
+  }
+
+  .cert-info    { padding: 10px 12px; }
+  .cert-title   { font-size: 0.88rem; }
+  .cert-org     { font-size: 0.72rem; }
+  .cert-year    { font-size: 0.68rem; }
+
+  /* Lightbox */
+  .cert-lightbox { padding: 8px; }
+
+  .lightbox-content { border-radius: 6px; }
+  .lightbox-img     { max-height: 50vh; }
+
+  .lightbox-arrow {
+    top: auto;
+    bottom: 64px;
+    transform: none;
+    width: 32px;
+    height: 32px;
+    font-size: 0.78rem;
+    background: rgba(10, 10, 10, 0.55);
+    border: none;
+  }
+
+  .lightbox-arrow-prev { left: 6px; }
+  .lightbox-arrow-next { right: 6px; }
+
+  .lightbox-caption       { flex-direction: column; align-items: flex-start; padding: 10px 12px; }
+  .lightbox-caption-title { font-size: 0.85rem; }
+  .lightbox-caption-org   { font-size: 0.75rem; }
+
+  .lightbox-close   { width: 32px; height: 32px; font-size: 0.9rem; top: 8px; right: 8px; }
+  .lightbox-counter { font-size: 0.68rem; top: 10px; left: 10px; }
+}
+
+
+/* ── Landscape phones ── */
+@media (max-width: 767px) and (orientation: landscape) {
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .cert-card img   { height: 150px; }
+  .lightbox-img    { max-height: 70vh; }
+}
